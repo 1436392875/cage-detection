@@ -1,0 +1,23 @@
+0.00.017.416 I srv  llama_server: initializing ...
+0.00.017.448 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.019.225 W srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.022.720 I srv    load_model: loading model '/home/nvidia/2026/llama.cpp/qwenVL/Qwen3VL-2B-Instruct-Q4_K_M.gguf'
+0.01.170.696 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.03.892.330 I cmn          init: llama threadpool init, n_threads = 6
+0.04.354.921 W load_hparams: Qwen-VL models require at minimum 1024 image tokens to function correctly on grounding tasks
+0.04.354.936 W load_hparams: if you encounter problems with accuracy, try adding --image-min-tokens 1024
+0.04.354.937 W load_hparams: more info: https://github.com/ggml-org/llama.cpp/issues/16842
+
+0.05.243.628 I srv    load_model: loaded multimodal model, '/home/nvidia/2026/llama.cpp/qwenVL/mmproj-Qwen3VL-2B-Instruct-Q8_0.gguf'
+0.05.347.169 I srv    load_model: initializing, n_slots = 4, n_ctx_slot = 2048, kv_unified = 'true'
+0.05.372.398 I srv  llama_server: model loaded
+0.05.372.422 I srv  llama_server: listening on http://127.0.0.1:8080
+0.05.372.424 W srv  llama_server: notice: server default port will be changed to :9931 in a future release (ref: https://github.com/ggml-org/llama.cpp/pull/26508)
+0.36.776.482 I slot get_availabl: id  3 | task -1 | selected slot by LRU, t_last = -1
+0.36.776.970 I slot launch_slot_: id  3 | task 0 | processing task, is_child = 0
+0.44.471.753 I slot print_timing: id  3 | task 0 | prompt eval time =    6022.35 ms /   280 tokens (   21.51 ms per token,    46.49 tokens per second)
+0.44.471.771 I slot print_timing: id  3 | task 0 |        eval time =    1672.31 ms /    45 tokens (   38.01 ms per token,    26.31 tokens per second)
+0.44.471.774 I slot print_timing: id  3 | task 0 |       total time =    7694.67 ms /   325 tokens
+0.44.471.786 I slot print_timing: id  3 | task 0 |    graphs reused =         44
+0.44.471.895 I slot      release: id  3 | task 0 | stop processing: n_tokens = 324, truncated = 0
+3.17.502.484 I srv    operator(): operator(): cleaning up before exit...

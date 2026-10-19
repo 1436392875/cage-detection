@@ -1,0 +1,25 @@
+[Unit]
+Description=Qwen3-VL-2B VLM server for alarm QC (llama.cpp)
+After=network.target
+# 必须先于 cage-detector 启动：GPU 大块内存（模型权重）需在 TRT 初始化前分配，
+# 反序会因统一内存碎片导致 cudaMalloc 失败（按需启停模式下仍保留此约束）
+Before=cage-detector.service
+# 崩溃保护：600 秒内最多重启 20 次（StartLimit* 必须在 [Unit] 段才生效）
+StartLimitIntervalSec=600
+StartLimitBurst=20
+
+[Service]
+Type=simple
+User=nvidia
+Group=nvidia
+WorkingDirectory=/home/nvidia/2026/llama.cpp
+Environment=CUDA_VISIBLE_DEVICES=0
+# 混合推理：LLM 层走 GPU（-ngl 99），视觉编码器走 CPU（--no-mmproj-offload）
+# 避免 ViT 的 400-800MB 连续锁页分配与 TensorRT 冲突
+ExecStart=/home/nvidia/2026/llama.cpp/build/bin/llama-server -m /home/nvidia/2026/llama.cpp/qwenVL/Qwen3VL-2B-Instruct-Q4_K_M.gguf --mmproj /home/nvidia/2026/llama.cpp/qwenVL/mmproj-Qwen3VL-2B-Instruct-Q8_0.gguf -c 2048 -ngl 99 --no-mmproj-offload --host 127.0.0.1 --port 8080
+Restart=always
+# 统一内存环境下旧进程显存释放有延迟，重启过快会连续 cudaMalloc 失败（实测 5s 不够）
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target

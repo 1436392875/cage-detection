@@ -1,0 +1,15 @@
+# Python 运行产物
+__pycache__/
+*.pyc
+
+# 系统文件
+.DS_Store
+
+# 敏感/内部文件（不入公开仓库）
+# ftp_secret.txt: FTP 实际密码（reboot_verify.sh 读取）
+# 其余 4 份为内部 docx 文档
+ftp_secret.txt
+报警回传测试步骤_v1.0.docx
+检测服务使用说明_v1.0.docx
+系统使用手册_罐笼图像检测.docx
+罐笼图像检测与报警回传通信协议_V0.1.docx

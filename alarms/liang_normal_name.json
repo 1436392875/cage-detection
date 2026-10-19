@@ -1,0 +1,19 @@
+{
+  "time": "2026-10-12 15:12:17",
+  "filename": "liang_normal_name.jpg",
+  "meta": {},
+  "detections": [
+    {
+      "class": "liang_ps",
+      "conf": 0.776,
+      "box": [
+        1947,
+        536,
+        2281,
+        801
+      ]
+    }
+  ],
+  "result_image": "/home/nvidia/2026/detector/results/liang_normal_name.jpg",
+  "target": ""
+}

@@ -1,0 +1,227 @@
+2026-10-12 15:11:34,888 [INFO] pipeline: 链路启动：watch=/home/nvidia/2026/detector/watch result=/home/nvidia/2026/detector/results
+2026-10-12 15:11:35,066 [ERROR] pipeline: 处理异常: /home/nvidia/2026/detector/watch/20261009140000000_007_042_0900_1234_0000000000.jpg
+Traceback (most recent call last):
+  File "/home/nvidia/2026/detector/pipeline.py", line 141, in run
+    process_one(oldest, detector, sender, result_dir, fail_dir)
+  File "/home/nvidia/2026/detector/pipeline.py", line 113, in process_one
+    sender.send_alarm(name, result_path, alarm_dets, meta)
+  File "/home/nvidia/2026/detector/sender.py", line 43, in send_alarm
+    os.makedirs(config.ALARM_DIR, exist_ok=True)
+  File "/usr/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/data/ftp'
+2026-10-12 15:11:35,128 [INFO] pipeline: 完成 20261009153525123_001_002_3600_5678_0000000000.jpg：推理 31.9ms 检出 0 报警 0
+2026-10-12 15:11:35,129 [ERROR] pipeline: 读图失败，移入 failed: 20261009170000000_001_001_0900_1234_0000000000.jpg
+2026-10-12 15:11:35,247 [ERROR] pipeline: 处理异常: /home/nvidia/2026/detector/watch/liang_normal_name.jpg
+Traceback (most recent call last):
+  File "/home/nvidia/2026/detector/pipeline.py", line 141, in run
+    process_one(oldest, detector, sender, result_dir, fail_dir)
+  File "/home/nvidia/2026/detector/pipeline.py", line 113, in process_one
+    sender.send_alarm(name, result_path, alarm_dets, meta)
+  File "/home/nvidia/2026/detector/sender.py", line 43, in send_alarm
+    os.makedirs(config.ALARM_DIR, exist_ok=True)
+  File "/usr/lib/python3.10/os.py", line 215, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/data/ftp'
+2026-10-12 15:11:35,247 [INFO] pipeline: 单次模式：目录已空，退出
+2026-10-12 15:12:17,019 [INFO] pipeline: 链路启动：watch=/home/nvidia/2026/detector/watch result=/home/nvidia/2026/detector/results
+2026-10-12 15:12:17,020 [INFO] pipeline: 恢复中断文件: liang_normal_name.jpg.processing
+2026-10-12 15:12:17,020 [INFO] pipeline: 恢复中断文件: 20261009140000000_007_042_0900_1234_0000000000.jpg.processing
+2026-10-12 15:12:17,195 [INFO] sender: 报警记录已落盘（1 个目标）: /home/nvidia/2026/detector/alarms/20261009140000000_007_042_0900_1234_0000000000.json
+2026-10-12 15:12:17,196 [INFO] pipeline: 完成 20261009140000000_007_042_0900_1234_0000000000.jpg：推理 80.6ms 检出 1 报警 1
+2026-10-12 15:12:17,315 [INFO] sender: 报警记录已落盘（1 个目标）: /home/nvidia/2026/detector/alarms/liang_normal_name.json
+2026-10-12 15:12:17,316 [INFO] pipeline: 完成 liang_normal_name.jpg：推理 35.8ms 检出 1 报警 1
+2026-10-12 15:12:17,316 [INFO] pipeline: 单次模式：目录已空，退出
+2026-10-12 15:12:39,077 [INFO] pipeline: 链路启动：watch=/home/nvidia/2026/detector/watch result=/home/nvidia/2026/detector/results
+2026-10-12 15:13:41,339 [INFO] sender: 报警记录已落盘（1 个目标）: /home/nvidia/2026/detector/alarms/20261009180000000_002_003_0900_1234_0000000000.json
+2026-10-12 15:13:41,340 [INFO] pipeline: 完成 20261009180000000_002_003_0900_1234_0000000000.jpg：推理 89.1ms 检出 1 报警 1
+2026-10-12 15:27:41,867 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results
+2026-10-12 15:27:42,029 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261009143025123_007_042_0900_1234_0000000000.json
+2026-10-12 15:27:42,029 [INFO] pipeline: 完成 20261009143025123_007_042_0900_1234_0000000000.jpg：推理 77.7ms 检出 1 报警 1
+2026-10-12 15:28:15,169 [INFO] pipeline: 完成 20261009150000000_001_002_3600_5678_0000000000.jpg：推理 42.4ms 检出 0 报警 0
+2026-10-12 15:28:15,325 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261009160000000_007_042_0900_1234_0000000000.json
+2026-10-12 15:28:15,325 [INFO] pipeline: 完成 20261009160000000_007_042_0900_1234_0000000000.jpg：推理 33.6ms 检出 1 报警 1
+2026-10-12 15:35:32,554 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results
+2026-10-12 15:35:51,624 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results
+2026-10-12 15:36:51,945 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261009170000000_007_042_0900_1234_0000000000.json
+2026-10-12 15:36:51,946 [INFO] pipeline: 完成 20261009170000000_007_042_0900_1234_0000000000.jpg：推理 100.5ms 检出 1 报警 1
+2026-10-12 15:52:09,589 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results
+2026-10-12 15:52:24,813 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261012155224123_007_042_0900_1234_0000000000.json
+2026-10-12 15:52:24,882 [INFO] sender: 报警已回传 FTP[127.0.0.1:21/return]: 20261012155224123_007_042_0900_1234_0000000000.jpg
+2026-10-12 15:52:24,883 [INFO] pipeline: 完成 20261012155224123_007_042_0900_1234_0000000000.jpg：推理 88.1ms 检出 1 报警 1
+2026-10-12 15:52:47,993 [INFO] pipeline: 完成 20261012160000000_001_002_3600_5678_0000000000.jpg：推理 42.8ms 检出 0 报警 0
+2026-10-12 15:53:40,747 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results
+2026-10-12 15:53:44,931 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261012155344456_007_042_0900_1234_0000000000.json
+2026-10-12 15:53:44,934 [ERROR] sender: FTP 回传失败（本地记录已保留）: [Errno 111] Connection refused
+2026-10-12 15:53:44,935 [INFO] pipeline: 完成 20261012155344456_007_042_0900_1234_0000000000.jpg：推理 85.2ms 检出 1 报警 1
+2026-10-12 15:54:22,748 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results
+2026-10-12 15:58:03,997 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results
+2026-10-12 16:01:51,947 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261012160151789_007_042_0900_1234_0000000000.json
+2026-10-12 16:01:52,014 [INFO] sender: 报警已回传 FTP[127.0.0.1:21/return]: 20261012160151789_007_042_0900_1234_0000000000.jpg
+2026-10-12 16:01:52,015 [INFO] pipeline: 完成 20261012160151789_007_042_0900_1234_0000000000.jpg：推理 174.9ms 检出 1 报警 1
+2026-10-12 16:04:54,400 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261012160453999_007_042_0900_1234_0000000000.json
+2026-10-12 16:04:54,461 [INFO] sender: 报警已回传 FTP[127.0.0.1:21/return]: 20261012160453999_007_042_0900_1234_0000000000.jpg
+2026-10-12 16:04:54,462 [INFO] pipeline: 完成 20261012160453999_007_042_0900_1234_0000000000.jpg：推理 34.0ms 检出 1 报警 1
+2026-10-12 16:15:52,374 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/jingbi_20261009000010.json
+2026-10-12 16:15:52,444 [INFO] sender: 报警已回传 FTP[127.0.0.1:21/return]: jingbi_20261009000010.jpg
+2026-10-12 16:15:52,445 [INFO] pipeline: 完成 jingbi_20261009000010.jpg：推理 33.4ms 检出 1 报警 1
+2026-10-12 16:39:59,215 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261012171000000_007_042_0900_1234_0000000000.json
+2026-10-12 16:39:59,276 [INFO] sender: 报警已回传 FTP[127.0.0.1:21/return]: 20261012171000000_007_042_0900_1234_0000000000.jpg
+2026-10-12 16:39:59,277 [INFO] pipeline: 完成 20261012171000000_007_042_0900_1234_0000000000.jpg：推理 33.2ms 检出 1 报警 1
+2026-10-12 16:40:02,473 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261012171000001_007_042_0900_1234_0000000000.json
+2026-10-12 16:40:02,540 [INFO] sender: 报警已回传 FTP[127.0.0.1:21/return]: 20261012171000001_007_042_0900_1234_0000000000.jpg
+2026-10-12 16:40:02,541 [INFO] pipeline: 完成 20261012171000001_007_042_0900_1234_0000000000.jpg：推理 33.9ms 检出 1 报警 1
+2026-10-12 16:40:05,717 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261012171000002_007_042_0900_1234_0000000000.json
+2026-10-12 16:40:05,786 [INFO] sender: 报警已回传 FTP[127.0.0.1:21/return]: 20261012171000002_007_042_0900_1234_0000000000.jpg
+2026-10-12 16:40:05,787 [INFO] pipeline: 完成 20261012171000002_007_042_0900_1234_0000000000.jpg：推理 34.5ms 检出 1 报警 1
+2026-10-14 15:10:17,513 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(gate)
+2026-10-14 15:12:37,863 [INFO] qc: 质检通过（10721ms）: 确认存在
+2026-10-14 15:12:37,864 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261013143025123_007_042_0900_1234_0000000000.json
+2026-10-14 15:12:37,882 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261013143025123_007_042_0900_1234_0000000000_G002.jpg
+2026-10-14 15:12:37,883 [INFO] pipeline: 完成 20261013143025123_007_042_0900_1234_0000000000.jpg：推理 257.3ms 检出 1 报警 1
+2026-10-14 15:13:48,073 [INFO] pipeline: 完成 20261013143500123_007_042_0900_1234_0000000000.jpg：推理 42.9ms 检出 0 报警 0
+2026-10-14 15:21:17,025 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record)
+2026-10-14 15:22:07,975 [INFO] qc: 质检通过（11542ms）: 确认存在
+2026-10-14 15:22:07,976 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261013144000123_007_042_0900_1234_0000000000.json
+2026-10-14 15:22:07,989 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261013144000123_007_042_0900_1234_0000000000_G011.jpg
+2026-10-14 15:22:07,990 [INFO] pipeline: 完成 20261013144000123_007_042_0900_1234_0000000000.jpg：推理 191.0ms 检出 1 报警 1
+2026-10-14 17:16:00,675 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record)
+2026-10-14 17:20:40,992 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record)
+2026-10-14 17:23:17,583 [INFO] qc: 质检 通过（2136ms）: 检出['G002'] 确认['G002']
+2026-10-14 17:23:17,584 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014172000000_001_001_0001_0001_0000000001.json
+2026-10-14 17:23:17,596 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014172000000_001_001_0001_0001_0000000001_G002.jpg
+2026-10-14 17:23:17,597 [INFO] pipeline: 完成 20261014172000000_001_001_0001_0001_0000000001.jpg：推理 151.6ms 检出 1 报警 1
+2026-10-14 17:56:32,792 [INFO] qc: 质检 通过（5177ms）: 检出['G007'] 确认['G007']
+2026-10-14 17:56:32,793 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014183000000_001_001_0001_0001_0000000001.json
+2026-10-14 17:56:32,805 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183000000_001_001_0001_0001_0000000001_G007.jpg
+2026-10-14 17:56:32,805 [INFO] pipeline: 完成 20261014183000000_001_001_0001_0001_0000000001.jpg：推理 70.0ms 检出 1 报警 1
+2026-10-14 17:56:38,157 [INFO] qc: 质检 通过（5220ms）: 检出['G007'] 确认['G007']
+2026-10-14 17:56:38,158 [INFO] sender: 报警记录已落盘（3 个目标）: /data/ftp/alarms/20261014183100000_001_001_0001_0001_0000000001.json
+2026-10-14 17:56:38,168 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183100000_001_001_0001_0001_0000000001_G007.jpg
+2026-10-14 17:56:38,169 [INFO] pipeline: 完成 20261014183100000_001_001_0001_0001_0000000001.jpg：推理 20.3ms 检出 3 报警 3
+2026-10-14 17:56:43,892 [INFO] qc: 质检 通过（5604ms）: 检出['G009'] 确认['G009']
+2026-10-14 17:56:43,893 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014183200000_001_001_0001_0001_0000000001.json
+2026-10-14 17:56:43,907 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183200000_001_001_0001_0001_0000000001_G009.jpg
+2026-10-14 17:56:43,908 [INFO] pipeline: 完成 20261014183200000_001_001_0001_0001_0000000001.jpg：推理 19.1ms 检出 1 报警 1
+2026-10-14 17:56:49,593 [INFO] qc: 质检 通过（5554ms）: 检出['G009'] 确认['G009']
+2026-10-14 17:56:49,593 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014183300000_001_001_0001_0001_0000000001.json
+2026-10-14 17:56:49,606 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183300000_001_001_0001_0001_0000000001_G009.jpg
+2026-10-14 17:56:49,607 [INFO] pipeline: 完成 20261014183300000_001_001_0001_0001_0000000001.jpg：推理 18.4ms 检出 1 报警 1
+2026-10-14 17:56:54,645 [INFO] qc: 质检 通过（4942ms）: 检出['G011'] 确认['G011']
+2026-10-14 17:56:54,646 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014183400000_001_001_0001_0001_0000000001.json
+2026-10-14 17:56:54,656 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183400000_001_001_0001_0001_0000000001_G011.jpg
+2026-10-14 17:56:54,657 [INFO] pipeline: 完成 20261014183400000_001_001_0001_0001_0000000001.jpg：推理 17.4ms 检出 1 报警 1
+2026-10-14 17:57:00,120 [INFO] qc: 质检 通过（5364ms）: 检出['G011'] 确认['G011']
+2026-10-14 17:57:00,121 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014183500000_001_001_0001_0001_0000000001.json
+2026-10-14 17:57:00,132 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183500000_001_001_0001_0001_0000000001_G011.jpg
+2026-10-14 17:57:00,132 [INFO] pipeline: 完成 20261014183500000_001_001_0001_0001_0000000001.jpg：推理 21.0ms 检出 1 报警 1
+2026-10-14 17:57:05,789 [INFO] qc: 质检 通过（5559ms）: 检出['G014'] 确认['G014']
+2026-10-14 17:57:05,790 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014183600000_001_001_0001_0001_0000000001.json
+2026-10-14 17:57:05,801 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183600000_001_001_0001_0001_0000000001_G014.jpg
+2026-10-14 17:57:05,802 [INFO] pipeline: 完成 20261014183600000_001_001_0001_0001_0000000001.jpg：推理 17.5ms 检出 1 报警 1
+2026-10-14 17:57:11,466 [INFO] qc: 质检 通过（5559ms）: 检出['G015'] 确认['G015', 'G016']
+2026-10-14 17:57:11,467 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014183700000_001_001_0001_0001_0000000001.json
+2026-10-14 17:57:11,480 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183700000_001_001_0001_0001_0000000001_G015.jpg
+2026-10-14 17:57:11,481 [INFO] pipeline: 完成 20261014183700000_001_001_0001_0001_0000000001.jpg：推理 18.1ms 检出 1 报警 1
+2026-10-14 17:57:13,528 [INFO] qc: 质检 通过（1947ms）: 检出['G002'] 确认['G002']
+2026-10-14 17:57:13,529 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014183800000_001_001_0001_0001_0000000001.json
+2026-10-14 17:57:13,541 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183800000_001_001_0001_0001_0000000001_G002.jpg
+2026-10-14 17:57:13,542 [INFO] pipeline: 完成 20261014183800000_001_001_0001_0001_0000000001.jpg：推理 17.5ms 检出 1 报警 1
+2026-10-14 17:57:19,181 [INFO] qc: 质检 通过（5536ms）: 检出['G002'] 确认['G002']
+2026-10-14 17:57:19,182 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014183900000_001_001_0001_0001_0000000001.json
+2026-10-14 17:57:19,195 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014183900000_001_001_0001_0001_0000000001_G002.jpg
+2026-10-14 17:57:19,196 [INFO] pipeline: 完成 20261014183900000_001_001_0001_0001_0000000001.jpg：推理 17.5ms 检出 1 报警 1
+2026-10-14 17:57:24,827 [INFO] qc: 质检 通过（5526ms）: 检出['G005'] 确认['G005']
+2026-10-14 17:57:24,828 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014184000000_001_001_0001_0001_0000000001.json
+2026-10-14 17:57:24,840 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014184000000_001_001_0001_0001_0000000001_G005.jpg
+2026-10-14 17:57:24,841 [INFO] pipeline: 完成 20261014184000000_001_001_0001_0001_0000000001.jpg：推理 17.7ms 检出 1 报警 1
+2026-10-14 17:57:24,945 [INFO] pipeline: 完成 20261014184100000_001_001_0001_0001_0000000001.jpg：推理 17.4ms 检出 0 报警 0
+2026-10-14 17:57:30,599 [INFO] qc: 质检 通过（5550ms）: 检出['G004'] 确认['G004']
+2026-10-14 17:57:30,600 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014184200000_001_001_0001_0001_0000000001.json
+2026-10-14 17:57:30,609 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014184200000_001_001_0001_0001_0000000001_G004.jpg
+2026-10-14 17:57:30,610 [INFO] pipeline: 完成 20261014184200000_001_001_0001_0001_0000000001.jpg：推理 17.2ms 检出 1 报警 1
+2026-10-14 17:57:36,286 [INFO] qc: 质检 通过（5572ms）: 检出['G004'] 确认['G004']
+2026-10-14 17:57:36,287 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261014184300000_001_001_0001_0001_0000000001.json
+2026-10-14 17:57:36,296 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261014184300000_001_001_0001_0001_0000000001_G004.jpg
+2026-10-14 17:57:36,297 [INFO] pipeline: 完成 20261014184300000_001_001_0001_0001_0000000001.jpg：推理 17.5ms 检出 1 报警 1
+2026-10-15 09:30:47,153 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record)
+2026-10-15 09:35:18,773 [INFO] qc: 质检 通过（5542ms）: 检出['G002'] 确认['G002']
+2026-10-15 09:35:18,774 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261015093510123_007_042_0900_1234_0000000000.json
+2026-10-15 09:35:18,787 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261015093510123_007_042_0900_1234_0000000000_G002.jpg
+2026-10-15 09:35:18,787 [INFO] pipeline: 完成 20261015093510123_007_042_0900_1234_0000000000.jpg：推理 180.9ms 检出 1 报警 1
+2026-10-16 10:22:42,267 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record)
+2026-10-16 10:24:28,796 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record)
+2026-10-16 10:27:22,713 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record)
+2026-10-16 10:30:00,969 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record)
+2026-10-16 10:46:40,229 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 10:47:53,084 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 10:47:59,482 [INFO] pipeline: 质检热开关关闭，跳过多模态质检: 20261016100000001_001_001_0001_0001_0000000001.jpg
+2026-10-16 10:47:59,483 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261016100000001_001_001_0001_0001_0000000001.json
+2026-10-16 10:47:59,489 [ERROR] sender: HTTP 推送异常: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /api/ai/alarmevent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff87526d40>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2026-10-16 10:48:01,501 [ERROR] sender: HTTP 推送异常: HTTPConnectionPool(host='127.0.0.1', port=8081): Max retries exceeded with url: /api/ai/alarmevent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff61904040>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2026-10-16 10:48:01,501 [ERROR] sender: HTTP 推送最终失败（本地记录已保留，可补发）: 20261016100000001_001_001_0001_0001_0000000001_G002.jpg
+2026-10-16 10:48:01,502 [INFO] pipeline: 完成 20261016100000001_001_001_0001_0001_0000000001.jpg：推理 186.2ms 检出 1 报警 1
+2026-10-16 10:48:28,871 [INFO] qc: 质检 通过（6152ms）: 检出['G002'] 确认['G002']
+2026-10-16 10:48:28,871 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261016100000002_001_001_0001_0001_0000000001.json
+2026-10-16 10:48:28,885 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261016100000002_001_001_0001_0001_0000000001_G002.jpg
+2026-10-16 10:48:28,885 [INFO] pipeline: 完成 20261016100000002_001_001_0001_0001_0000000001.jpg：推理 31.8ms 检出 1 报警 1
+2026-10-16 11:10:58,034 [INFO] api: 控制接口就绪: http://127.0.0.1:8082 (GET /status, POST /params)
+2026-10-16 11:10:58,035 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 11:14:28,504 [INFO] api: 控制接口就绪: http://127.0.0.1:8082 (GET /status, POST /params)
+2026-10-16 11:14:28,505 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=on(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 11:14:35,875 [INFO] api: 控制接口热调参数: {'qc': 'off'}
+2026-10-16 11:15:33,536 [INFO] api: 控制接口就绪: http://127.0.0.1:8082 (GET /status, POST /params)
+2026-10-16 11:15:33,538 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=off(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 11:15:40,896 [INFO] api: 控制接口热调参数: {'qc': 'off'}
+2026-10-16 11:15:41,949 [INFO] pipeline: 质检热开关关闭，跳过多模态质检: 20261016110000001_001_001_0001_0001_0000000001.jpg
+2026-10-16 11:15:41,950 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261016110000001_001_001_0001_0001_0000000001.json
+2026-10-16 11:15:41,967 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261016110000001_001_001_0001_0001_0000000001_G002.jpg
+2026-10-16 11:15:41,968 [INFO] pipeline: 完成 20261016110000001_001_001_0001_0001_0000000001.jpg：推理 194.3ms 检出 1 报警 1
+2026-10-16 11:15:52,513 [INFO] api: 控制接口热调参数: {'qc': 'on', 'conf_th': 0.35}
+2026-10-16 11:16:00,206 [INFO] qc: 质检 通过（7022ms）: 检出['G015'] 模型报告['G013', 'G011', 'G012', 'G014', 'G015']
+2026-10-16 11:16:00,206 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/20261016110000002_001_001_0001_0001_0000000001.json
+2026-10-16 11:16:00,218 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: 20261016110000002_001_001_0001_0001_0000000001_G015.jpg
+2026-10-16 11:16:00,219 [INFO] pipeline: 完成 20261016110000002_001_001_0001_0001_0000000001.jpg：推理 45.3ms 检出 1 报警 1
+2026-10-16 15:44:26,114 [INFO] api: 控制接口就绪: http://127.0.0.1:8082 (GET /status, POST /params)
+2026-10-16 15:44:26,114 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=off(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 15:59:40,710 [INFO] pipeline: 质检热开关关闭，跳过多模态质检: liang_20261009000726.jpg
+2026-10-16 15:59:40,711 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/liang_20261009000726.json
+2026-10-16 15:59:40,734 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: liang_20261009000726_G002.jpg
+2026-10-16 15:59:40,735 [INFO] pipeline: 完成 liang_20261009000726.jpg：推理 234.2ms 检出 1 报警 1
+2026-10-16 16:00:09,970 [INFO] pipeline: 质检热开关关闭，跳过多模态质检: liang_20261009000749.jpg
+2026-10-16 16:00:09,971 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/liang_20261009000749.json
+2026-10-16 16:00:09,992 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: liang_20261009000749_G002.jpg
+2026-10-16 16:00:09,993 [INFO] pipeline: 完成 liang_20261009000749.jpg：推理 41.5ms 检出 1 报警 1
+2026-10-16 16:30:10,477 [INFO] api: 控制接口就绪: http://127.0.0.1:8082 (GET /status, POST /params)
+2026-10-16 16:30:10,478 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=off(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 16:30:10,496 [INFO] qc: 精筛关闭，已停止 llama-server 释放资源
+2026-10-16 16:30:49,271 [INFO] api: 控制接口热调参数: {'qc': 'on'}
+2026-10-16 16:30:49,279 [INFO] qc: 按需拉起 llama-server（模型加载约 30~60 秒，期间报警按 fail-open 放行）...
+2026-10-16 16:32:47,739 [INFO] qc: llama-server 已就绪
+2026-10-16 16:33:29,056 [INFO] qc: 质检 否决（5759ms）: 检出['G002'] 模型报告['G001']
+2026-10-16 16:33:29,057 [INFO] sender: 报警记录已落盘（1 个目标）: /data/ftp/alarms/liang_20261009000726.json
+2026-10-16 16:33:29,073 [INFO] sender: 报警已推送 HTTP[http://127.0.0.1:8081/api/ai/alarmevent]: liang_20261009000726_G002.jpg
+2026-10-16 16:33:29,074 [INFO] pipeline: 完成 liang_20261009000726.jpg：推理 216.9ms 检出 1 报警 1
+2026-10-16 16:33:35,496 [INFO] qc: 精筛关闭，已停止 llama-server 释放资源
+2026-10-16 16:33:35,497 [INFO] api: 控制接口热调参数: {'qc': 'off'}
+2026-10-16 16:40:45,900 [INFO] api: 控制接口热调参数: {'qc': 'on'}
+2026-10-16 16:40:45,908 [INFO] qc: 按需拉起 llama-server（模型加载约 30~60 秒，期间报警按 fail-open 放行）...
+2026-10-16 16:40:45,969 [INFO] qc: 精筛关闭，已停止 llama-server 释放资源
+2026-10-16 16:40:45,970 [INFO] api: 控制接口热调参数: {'qc': 'off'}
+2026-10-16 16:41:18,121 [INFO] api: 控制接口就绪: http://127.0.0.1:8082 (GET /status, POST /params)
+2026-10-16 16:41:18,121 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=off(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 16:41:25,298 [INFO] api: 控制接口热调参数: {'qc': 'on'}
+2026-10-16 16:41:25,306 [INFO] qc: 按需拉起 llama-server（模型加载约 30~60 秒，期间报警按 fail-open 放行）...
+2026-10-16 16:41:25,385 [INFO] qc: 精筛关闭，已停止 llama-server 释放资源
+2026-10-16 16:41:25,385 [INFO] api: 控制接口热调参数: {'qc': 'off'}
+2026-10-16 16:43:25,793 [ERROR] qc: llama-server 等待就绪超时（120s）
+2026-10-16 17:26:34,732 [INFO] api: 控制接口就绪: http://127.0.0.1:8082 (GET /status, POST /params)
+2026-10-16 17:26:34,733 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=off(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 17:31:28,563 [INFO] api: 控制接口就绪: http://127.0.0.1:8082 (GET /status, POST /params)
+2026-10-16 17:31:28,564 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=off(record) 开关文件=/data/ftp/qc_switch.txt
+2026-10-16 17:38:40,885 [INFO] api: 控制接口就绪: http://127.0.0.1:8082 (GET /status, POST /params)
+2026-10-16 17:38:40,885 [INFO] pipeline: 链路启动：watch=/data/ftp/images result=/data/ftp/results send=http qc=off(record) 开关文件=/data/ftp/qc_switch.txt

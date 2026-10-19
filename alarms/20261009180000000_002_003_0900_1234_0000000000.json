@@ -1,0 +1,27 @@
+{
+  "time": "2026-10-12 15:13:41",
+  "filename": "20261009180000000_002_003_0900_1234_0000000000.jpg",
+  "meta": {
+    "timestamp": "20261009180000000",
+    "robot_id": "002",
+    "task_id": "003",
+    "camera_angle": "0900",
+    "encoder_pos": "1234",
+    "reserved": "0000000000",
+    "time_str": "2026-10-09 18:00:00.000"
+  },
+  "detections": [
+    {
+      "class": "dianlan_dlkl",
+      "conf": 0.746,
+      "box": [
+        613,
+        582,
+        783,
+        1236
+      ]
+    }
+  ],
+  "result_image": "/home/nvidia/2026/detector/results/20261009180000000_002_003_0900_1234_0000000000.jpg",
+  "target": ""
+}
